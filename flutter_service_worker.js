@@ -10,7 +10,7 @@ const RESOURCES = {
 "assets/assets/images/taobao_me.jpg": "c4555cf6ec292cbe96f502da61b1827b",
 "assets/FontManifest.json": "7e28d5ad5ca6d1cbcee918dadf056260",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/NOTICES": "662bcfae54516bb3d48d5cd1b7acaa22",
+"assets/NOTICES": "72298cacd71de52298fb4655a5cba3e1",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "831eb40a2d76095849ba4aecd4340f19",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "a126c025bab9a1b4d8ac5534af76a208",
@@ -18,11 +18,11 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "c98a98c5d3cfa0d9d4303265922ea723",
-"/": "c98a98c5d3cfa0d9d4303265922ea723",
-"main.dart.js": "3d8501841f13f5f8e65627348e9578fc",
+"index.html": "ab4648c50f15fff0bfd6becfea7bb00c",
+"/": "ab4648c50f15fff0bfd6becfea7bb00c",
+"main.dart.js": "8f90162beb5a4d1c200b077cc3861b8e",
 "manifest.json": "e56d946e9607d95bd28259d76a69c6b7",
-"version.json": "82eacd2e82d668c3fa983fba8bb9ad73"
+"version.json": "abd6138fb70fdebe3bbd812e2756649b"
 };
 
 // The application shell files that are downloaded before a service worker can

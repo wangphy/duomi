@@ -129,6 +129,8 @@
     // Checks if should display install popup notification:
     if (isIos() && !isInStandaloneMode()) {
       document.getElementById("popContainer").style.display = "block";
+    } else {
+      loadJs("main.dart.js", function () { });
     }
 
     function loadJs(url, callback) {
@@ -151,7 +153,7 @@
       script.src = url;
       document.body.appendChild(script);
     }
-    loadJs("main.dart.js", function () { });
+
 
   </script>
   <!-- <script src="main.dart.js" type="application/javascript"></script> -->

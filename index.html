@@ -123,7 +123,6 @@
     }
 
     function isInStandaloneMode() {
-      alert(window.navigator.standalone);
       return ('standalone' in window.navigator) && (window.navigator.standalone);
     }
 
@@ -132,8 +131,30 @@
       document.getElementById("popContainer").style.display = "block";
     }
 
+    function loadJs(url, callback) {
+      var script = document.createElement('script');
+      script.type = "text/javascript";
+      if (typeof (callback) != "undefined") {
+        if (script.readyState) {
+          script.onreadystatechange = function () {
+            if (script.readyState == "loaded" || script.readyState == "complete") {
+              script.onreadystatechange = null;
+              callback();
+            }
+          }
+        } else {
+          script.onload = function () {
+            callback();
+          }
+        }
+      }
+      script.src = url;
+      document.body.appendChild(script);
+    }
+    loadJs("main.dart.js", function () { });
+
   </script>
-  <script src="main.dart.js" type="application/javascript"></script>
+  <!-- <script src="main.dart.js" type="application/javascript"></script> -->
 </body>
 
 </html>

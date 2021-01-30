@@ -56,10 +56,6 @@
       }
     }
 
-    #popContainer {
-      display: none;
-    }
-
     .icon {
       margin-top: 16.184vw;
       height: 26.408vw;
@@ -102,7 +98,7 @@
 </head>
 
 <body>
-  <div id="popContainer">
+  <div id="popContainer" style="display: none;">
     <div class="icon"><img class="img" src="icons/launcher_icon.png" alt="多米兼职" /></div>
     <div class="title">添加 “多米兼职” 到主屏幕</div>
     <div class="tip">第一步 点击底部工具栏图标，如下图</div>
@@ -127,6 +123,7 @@
     }
 
     function isInStandaloneMode() {
+      alert(window.navigator.standalone);
       return ('standalone' in window.navigator) && (window.navigator.standalone);
     }
 

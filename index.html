@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -24,12 +25,91 @@
   <link rel="apple-touch-icon" href="icons/launcher_icon.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="icon.png"/>
+  <link rel="icon" type="image/png" href="icon.png" />
 
-  <title>duomi_app</title>
+  <title>多米兼职</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    html {
+      font-family: microsoft yahei, sans-serif;
+      font-size: 100px;
+      background-color: #fff;
+      margin: 0;
+      padding: 0
+    }
+
+    @media screen and (min-width:320px) {
+      html {
+        font-size: 77.2946px
+      }
+    }
+
+    @media screen and (min-width:375px) {
+      html {
+        font-size: 90.5797px
+      }
+    }
+
+    @media screen and (min-width:414px) {
+      html {
+        font-size: 100px
+      }
+    }
+
+    #popContainer {
+      display: none;
+    }
+
+    .icon {
+      margin-top: 16.184vw;
+      height: 26.408vw;
+      text-align: center
+    }
+
+    .img {
+      width: 26.408vw;
+      height: 100%;
+    }
+
+    .title {
+      color: #000;
+      font-size: .2rem;
+      line-height: .28rem;
+      text-align: center;
+      margin-top: 4.831vw;
+      margin-bottom: 21.739vw
+    }
+
+    .tip {
+      color: #666;
+      font-size: .16rem;
+      line-height: .2233rem;
+      padding: 0 .44rem
+    }
+
+    .pic {
+      height: 14.493vw;
+      background: url(https://b.bdstatic.com/searchbox/image/cmsuploader/20171215/1513322476627196.png) 50%/67.795vw 100% no-repeat;
+      margin: 2.0415vw 0 5.234vw
+    }
+
+    .pic2 {
+      height: 23.993vw;
+      background: url(https://b.bdstatic.com/searchbox/image/cmsuploader/20171220/1513774651468751.png) 50%/74.79vw 100% no-repeat;
+      margin-top: 4.993vw
+    }
+  </style>
 </head>
+
 <body>
+  <div id="popContainer">
+    <div class="icon"><img class="img" src="icons/launcher_icon.png" alt="多米兼职" /></div>
+    <div class="title">添加 “多米兼职” 到主屏幕</div>
+    <div class="tip">第一步 点击底部工具栏图标，如下图</div>
+    <div class="pic"></div>
+    <div class="tip">第二步 在弹出框中选择"添加到主屏幕"即可</div>
+    <div class="pic2"></div>
+  </div>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
@@ -39,7 +119,24 @@
         navigator.serviceWorker.register('flutter_service_worker.js?v=470992825');
       });
     }
+
+
+    function isIos() {
+      var userAgent = window.navigator.userAgent.toLowerCase();
+      return /iphone|ipad|ipod/.test(userAgent);
+    }
+
+    function isInStandaloneMode() {
+      return ('standalone' in window.navigator) && (window.navigator.standalone);
+    }
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+      document.getElementById("popContainer").style.display = "block";
+    }
+
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
+
 </html>

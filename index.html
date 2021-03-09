@@ -131,7 +131,7 @@
     if (isIos() && !isInStandaloneMode()) {
       document.getElementById("popContainer").style.display = "block";
     } else {
-      loadJs("main.dart.js", function () { });
+      loadJs("https://cdn.jsdelivr.net/gh/wangphy/duomi@master/main.dart.js", function () { });
     }
 
     function loadJs(url, callback) {
